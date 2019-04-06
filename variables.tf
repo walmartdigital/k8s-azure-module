@@ -60,9 +60,14 @@ variable "worker_count" {
   default = "3"
 }
 
-variable "worker_disk_size" {
-  type    = number
-  default = 30
+variable "worker_vm_size" {
+  type    = "string"
+  default = "Standard_DS4_v2"
+}
+
+variable "manager_vm_size" {
+  type    = "string"
+  default = "Standard_DS2_v2"
 }
 
 variable "lb_address_pool_id" {
