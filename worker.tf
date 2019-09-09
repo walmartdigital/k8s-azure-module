@@ -64,7 +64,7 @@ resource "azurerm_virtual_machine" "worker" {
   os_profile_linux_config {
     disable_password_authentication = true
 
-    ssh_keys = {
+    ssh_keys {
       path     = "/home/ubuntu/.ssh/authorized_keys"
       key_data = "${var.ssh_public_key}"
     }
