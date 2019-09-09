@@ -44,9 +44,14 @@ variable "default_tags" {
   type = "map"
 
   default = {
-    applicationname = "k8s"
-    deploymenttype  = "Terraform"
-    platform        = "Kubernetes"
+    applicationname         = "k8s"
+    deploymenttype          = "Terraform"
+    platform                = "Kubernetes"
+    costcenter              = "D1011250"
+    environmentinfo         = "N:PROD;T:PROD"
+    notificationdistlist    = "Underworld <underworld@wal-mart.com>"
+    ownerinfo               = "Sebastian Diaz <sebastian.diaz@walmart.com>"
+    sponsorinfo             = "Eli Sernerman <eli@walmart.com>"
   }
 }
 
