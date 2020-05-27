@@ -1,9 +1,8 @@
 resource "azurerm_network_interface" "worker" {
-  count                     = "${var.worker_count}"
-  name                      = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("worker%d", count.index + 1)}"
-  location                  = "${data.azurerm_resource_group.main.location}"
-  resource_group_name       = "${data.azurerm_resource_group.main.name}"
-  network_security_group_id = "${var.network_security_group_id}"
+  count               = "${var.worker_count}"
+  name                = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("worker%d", count.index + 1)}"
+  location            = "${data.azurerm_resource_group.main.location}"
+  resource_group_name = "${data.azurerm_resource_group.main.name}"
 
   ip_configuration {
     name                                    = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("worker%d", count.index + 1)}"

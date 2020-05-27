@@ -5,11 +5,10 @@ resource "azurerm_network_security_group" "managers" {
 }
 
 resource "azurerm_network_interface" "manager" {
-  count                     = 3
-  name                      = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("manager%d", count.index + 1)}"
-  location                  = "${data.azurerm_resource_group.main.location}"
-  resource_group_name       = "${data.azurerm_resource_group.main.name}"
-  network_security_group_id = "${azurerm_network_security_group.managers.id}"
+  count               = 3
+  name                = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("manager%d", count.index + 1)}"
+  location            = "${data.azurerm_resource_group.main.location}"
+  resource_group_name = "${data.azurerm_resource_group.main.name}"
 
   ip_configuration {
     name                          = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("manager%d", count.index + 1)}"
