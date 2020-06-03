@@ -60,6 +60,11 @@ variable "worker_count" {
   default = "3"
 }
 
+variable "worker_disk_size" {
+  type    = number
+  default = 30
+}
+
 variable "lb_address_pool_id" {
   type = "string"
 }
