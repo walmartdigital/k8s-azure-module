@@ -61,7 +61,7 @@ variable "worker_count" {
 }
 
 variable "worker_disk_size" {
-  type    = number
+  type    = "number"
   default = 30
 }
 
