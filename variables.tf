@@ -51,7 +51,7 @@ variable "default_tags" {
     environmentinfo         = "N:PROD;T:PROD"
     notificationdistlist    = "Underworld <underworld@wal-mart.com>"
     ownerinfo               = "Sebastian Diaz <sebastian.diaz@walmart.com>"
-    sponsorinfo             = "Eli Sernerman <eli@walmart.com>"
+    sponsorinfo             = "Eli Senerman <eli@walmart.com>"
   }
 }
 
