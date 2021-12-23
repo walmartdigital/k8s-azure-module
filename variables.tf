@@ -51,7 +51,7 @@ variable "default_tags" {
     environmentinfo         = "N:PROD;T:PROD"
     notificationdistlist    = "Underworld <underworld@wal-mart.com>"
     ownerinfo               = "Sebastian Diaz <sebastian.diaz@walmart.com>"
-    sponsorinfo             = "Eli Sernerman <eli@walmart.com>"
+    sponsorinfo             = "Eli Senerman <eli@walmart.com>"
   }
 }
 
@@ -60,21 +60,12 @@ variable "worker_count" {
   default = "3"
 }
 
-variable "worker_vm_size" {
-  type    = "string"
-  default = "Standard_DS4_v2"
-}
-
-variable "manager_vm_size" {
-  type    = "string"
-  default = "Standard_DS2_v2"
+variable "worker_disk_size" {
+  type    = "number"
+  default = 30
 }
 
 variable "lb_address_pool_id" {
-  type = "string"
-}
-
-variable "network_security_group_id" {
   type = "string"
 }
 
