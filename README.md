@@ -41,6 +41,9 @@ module "k8s" {
 * **worker_count**: Number of workers (type: string, default: 3).
 * **worker_disk_size**: A number used to assign a custom azure disk size configuration for workers.
 * **lb_address_pool_id**: Load balancer address pool id (type: string).
+* **manager_vm_disk_create_option**: Option for Managers to either create the disk or attach one already existent. Valid values: FromImage, Attach. (type: string, default: FromImage).
+* **bastion_vm_disk_create_option**: Option for Bastions to either create the disk or attach one already existent. Valid values: FromImage, Attach. (type: string, default: FromImage).
+* **worker_vm_disk_create_option**: Option for Workers to either create the disk or attach one already existent. Valid values: FromImage, Attach. (type: string, default: FromImage).
 
 ## Outputs
 

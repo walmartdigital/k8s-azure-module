@@ -77,3 +77,18 @@ variable "lb_address_pool_id" {
 variable "network_security_group_id" {
   type = "string"
 }
+
+variable "manager_vm_disk_create_option" {
+  type    = "string"
+  default = "FromImage"
+}
+
+variable "bastion_vm_disk_create_option" {
+  type    = "string"
+  default = "FromImage"
+}
+
+variable "worker_vm_disk_create_option" {
+  type    = "string"
+  default = "FromImage"
+}

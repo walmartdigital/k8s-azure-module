@@ -36,7 +36,7 @@ resource "azurerm_virtual_machine" "manager" {
   storage_os_disk {
     name              = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("manager%d", count.index + 1)}"
     caching           = "ReadWrite"
-    create_option     = "FromImage"
+    create_option     = "${var.manager_vm_disk_creation_option}"
     managed_disk_type = "Standard_LRS"
   }
 
