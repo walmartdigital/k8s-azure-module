@@ -63,3 +63,17 @@ variable "worker_count" {
 variable "lb_address_pool_id" {
   type = "string"
 }
+
+
+variable "worker_vm_size" {
+  type    = "string"
+}
+
+variable "manager_vm_size" {
+  type    = "string"
+}
+
+variable "worker_disk_size" {
+  type    = "number"
+  default = 100
+}

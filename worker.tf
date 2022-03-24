@@ -40,7 +40,7 @@ resource "azurerm_virtual_machine" "worker" {
   availability_set_id              = "${azurerm_availability_set.nodes.id}"
   resource_group_name              = "${data.azurerm_resource_group.main.name}"
   network_interface_ids            = ["${element(azurerm_network_interface.worker.*.id, count.index)}"]
-  vm_size                          = "Standard_DS4_v2"
+  vm_size                          = "${var.worker_vm_size}"
   delete_os_disk_on_termination    = true
   delete_data_disks_on_termination = true
 
@@ -53,6 +53,7 @@ resource "azurerm_virtual_machine" "worker" {
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
+    disk_size_gb      = "${var.worker_disk_size}"
   }
 
   os_profile {
