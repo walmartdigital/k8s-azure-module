@@ -40,7 +40,7 @@ resource "azurerm_virtual_machine" "worker" {
   availability_set_id              = "${azurerm_availability_set.nodes.id}"
   resource_group_name              = "${data.azurerm_resource_group.main.name}"
   network_interface_ids            = ["${element(azurerm_network_interface.worker.*.id, count.index)}"]
-  vm_size                          = "${var.worker_vm_size}"
+  vm_size                          = "Standard_D16as_v5"
   delete_os_disk_on_termination    = true
   delete_data_disks_on_termination = true
 

@@ -64,14 +64,6 @@ variable "lb_address_pool_id" {
 }
 
 
-variable "worker_vm_size" {
-  type    = "string"
-}
-
-variable "manager_vm_size" {
-  type    = "string"
-}
-
 variable "worker_disk_size" {
   type = "string"
   default = "100"
