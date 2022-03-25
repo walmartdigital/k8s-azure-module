@@ -57,7 +57,6 @@ variable "default_tags" {
 
 variable "worker_count" {
   type    = "string"
-  default = "3"
 }
 
 variable "lb_address_pool_id" {
