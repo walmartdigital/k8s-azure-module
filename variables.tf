@@ -73,6 +73,6 @@ variable "manager_vm_size" {
 }
 
 variable "worker_disk_size" {
-  type = "int"
-  default = 100
+  type = "string"
+  default = "100"
 }
