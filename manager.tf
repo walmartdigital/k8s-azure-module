@@ -5,7 +5,7 @@ resource "azurerm_network_security_group" "managers" {
 }
 
 resource "azurerm_network_interface" "manager" {
-  count                     = 3
+  count                     = 7
   name                      = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("manager%d", count.index + 1)}"
   location                  = "${data.azurerm_resource_group.main.location}"
   resource_group_name       = "${data.azurerm_resource_group.main.name}"
