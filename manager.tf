@@ -19,7 +19,7 @@ resource "azurerm_network_interface" "manager" {
 }
 
 resource "azurerm_virtual_machine" "manager" {
-  count                            = 3
+  count                            = 5
   name                             = "${var.cluster_name}-${var.environment}-${var.name_suffix}-${format("manager%d", count.index + 1)}"
   location                         = "${data.azurerm_resource_group.main.location}"
   availability_set_id              = "${azurerm_availability_set.nodes.id}"
